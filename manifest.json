@@ -1,11 +1,14 @@
 {
-  "name": "Trigger Warning System",
-  "version": "1.4",
+  "name": "content warning",
+  "version": "1.2",
   "description": "HackNC2019",
   "permissions": ["storage"],
-  "page_action": {
-    "default_popup": "interface.html"
-  },
+  "browser_action": {
+      "default_popup": "interface.html"
+    },
+  "icons": { "16": "cwicon16.png",
+    "48": "cwicon48.png",
+    "128": "cwicon128.png"},
   "background": {
     "scripts": ["script.js"],
     "persistent": false

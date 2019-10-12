@@ -1,12 +1,17 @@
 <html>
-  <body>
-    <div class="replacement-div">
-      <div class="text-warning">
-          <h1>This post was marked as sensitive through the PLACEHOLDER_EXTENSION_NAME</h1>
-      </div>
-      <div class="view-check-form">
-          <button type="button" onclick="alert('Hello world!')">Would you like to see this post?</button>
-      </div>
-  </div>
-  </body>
-</html>
+    <head>
+      <title>content warning</title>
+      <link rel="stylesheet" type="text/css" href="interface.css">
+    </head>
+    <body>
+      <form id = "warningForm">
+        Please enter the content labels you would like to remove from your feed one by one:<br>
+        <br>
+        <input type="text" id="warnings"><br>
+        <br>
+        <button type="button" id="addButton" name="add">Add</button>
+        <div id="warnMe"></div>
+      </form>
+     <script src="interfaceScript.js"></script>
+    </body>
+  </html>

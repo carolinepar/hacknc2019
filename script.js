@@ -1,71 +1,46 @@
-var x = document.getElementsByClassName("_2s1y");
-//x.style.backgroundColor = "red";
-var i;
-for (i = 0; i < x.length; i++) {
-  x[i].style.backgroundColor = "red";
-}
+
+//Observes everytime the DOM is updated - when the page feed is refreshed or the page loads mroe posts at the botttom
 var mutationObserver = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
-    //let x = document.getElementsByClassName("userContentWrapper");
-    let x = document.querySelectorAll('[data-testid=fbfeed_story]');
-    
-    let i;
 
-    for(i = 0; i < x.length; i++) {
-      if(typeof(x[i]) !== 'undefined') {
-        let oldNode = x[i];
-        let child = x[i].childNodes[0];
-        //child.style.display = 'none';
-        let replace = document.createElement("div");
-        replace.innerHTML = `<div class="replacement-div"><div class="text-warning"><h1>This post was marked as sensitive through the PLACEHOLDER_EXTENSION_NAME</h1></div><div class="view-check-form"><button class="contentButton" type="button" onclick="display()">Would you like to see this post?</button></div></div>`;
-        x[i].parentElement.replaceChild(replace, x[i]);
-       
+    //gets every post in the feed
+    let x = document.getElementsByClassName("userContentWrapper");
+    let replace = document.createElement("p");
+    replace.innerHTML = `
+    <div class="replacement-div" style="text-align: center; width: 500px; margin: auto">
+            <div class="text-warning">
+                <h3>This post was marked as sensitive through the 
+                    <span style="color: #3b5998">content warning</span> extension</h3>
+            </div>
+            <div class="extra-info">
+                <h5>To update your sensitivty settings and preferences, go to the 
+                    <span style="color: #3b5998">content warning</span> extension in your browser</h5>
+            </div>
+        </div>
+    `;
+    
+    //gets the array of words that should make a post be hidden
+    chrome.storage.sync.get("warnings", function(a){
+      let keywords = [];
+      if(a.warnings === undefined){
+        keywords = [];
+        console.log(keywords);
+      } else{
+        keywords = a.warnings;
+        console.log(keywords);
       }
-    }
-    
 
-    function display() {
-      alert('yeet');
-    }
-    /*for (i = 0; i < x.length; i++) {
-    
-
-
-      //let oldNode = x[i];
-      let replace = document.createElement("div");
-      replace.innerHTML = `<div class="replacement-div"><div class="text-warning"><h1>This post was marked as sensitive through the PLACEHOLDER_EXTENSION_NAME</h1></div><div class="view-check-form"><button class="contentButton" type="button" onclick="alert("yeet")">Would you like to see this post?</button></div></div>`;
-    
-      x[i].parentElement.replaceChild(replace, x[i]);*/
-
-      //let parent = x[i].parentElement;
-      //x[i].style.display = "none";
-      //alert(parent.hasChildNodes);
-        
-      //oldNodes[i] = x[i].parentElement.removeChild();
-      //x[i].appendChild(replace);
-      //x[i].parentElement.parentElement.appendChild(replace);
-
-
-      
-      //x[i].parentElement.appendChild(replace);
-
-      //
-            
-      
-     // x[i].parentElement.replaceChild(replace, x[i]);
-    
+      //hides a post if it includes one of the key words
+      for(let i = 0; i < x.length; i++) {
+        for(let j = 0; j < keywords.length; j++) {
+          if(x[i].textContent.includes(keywords[j])) {
+            x[i].parentElement.replaceChild(replace, x[i]);
+          }
+        }
+      }
+    });
   });
 });
-/*
-function displayContent (post) {
-    x[i].style.display = "initial";
-}
-*/function display () {
-  alert("yeet");
-}
-
-// Select the node that will be observed for mutations
-const targetNode = document.querySelector('[aria-label="News Feed"]');
 
 // Options for the observer (which mutations to observe)
 mutationObserver.observe(document.documentElement, {
