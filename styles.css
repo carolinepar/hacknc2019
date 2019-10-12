@@ -1,11 +1,15 @@
-.userContent{
-    color: pink;
+.userContentWrapper{
+    color: rgb(83, 124, 235);
 }
 
-._5pco{
-    color: pink;
+.replacement-div{
+    text-align: center;
 }
 
-._5pbx{
+/* ._5pco{
     color: pink;
-}
+} */
+
+/* ._5pbx{
+    color: rgb(192, 255, 241);
+} */
