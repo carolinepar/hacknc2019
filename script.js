@@ -8,10 +8,6 @@ var mutationObserver = new MutationObserver(function(mutations) {
                 <h3>This post was marked as sensitive through the 
                     <span style="color: #3b5998">content warning</span> extension</h3>
             </div>
-            <div>
-                <button class="view-check-button" style="padding: 6px 18px; border-radius: 4px;"
-                 type="button" onclick="alert('Hello world!')">Would you like to see this post?</button>
-            </div>
             <div class="extra-info">
                 <h5>To update your sensitivty settings and preferences, go to the 
                     <span style="color: #3b5998">content warning</span> extension in your browser</h5>
@@ -19,12 +15,12 @@ var mutationObserver = new MutationObserver(function(mutations) {
         </div>
     `;
     
-    let keywords = [];
+    let keywords = ["peaches"];
     let ar = [];
     chrome.storage.sync.get("warnings", function(a){ar = a.warnings});
     if(ar != undefined){
       keywords = ar;
-      console.log(keywords);
+      //console.log(keywords);
     }
 
     for(let i = 0; i < x.length; i++) {
