@@ -2,11 +2,8 @@
     text-align: center;
     width: 500px;
     height: 1000px;
+    margin: auto;
 }
-
-/* .text-warning {
-
-} */
 
 .view-check-button {
     padding: 6px 18px;
@@ -16,6 +13,6 @@
 }
 
 .view-check-button:hover {
-    background-color: white;
-    color: black;
+    background-color: #3b5998;
+    color: white;
   }

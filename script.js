@@ -17,7 +17,7 @@ var mutationObserver = new MutationObserver(function(mutations) {
     
     let keywords = ["peaches"];
     let ar = [];
-    chrome.storage.sync.get("warnings", function(a){ar = a.warnings});
+    //chrome.storage.sync.get("warnings", function(a){ar = a.warnings});
     if(ar != undefined){
       keywords = ar;
       //console.log(keywords);
