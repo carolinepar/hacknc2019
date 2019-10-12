@@ -1,8 +1,8 @@
 chrome.storage.sync.get("warnings", function(data){
     if(data.warnings === undefined){
-        chrome.storage.sync.set({"warnings": []}, function(){console.log("new storage made")})
+        chrome.storage.sync.set({"warnings": []}, function(){console.log("new storage made")});
     }
-})
+});
 
 document.getElementById("addButton").onclick = function() {addWarning()};
 document.getElementById("removeButton").onclick = function() {removeWarning()};
@@ -11,8 +11,10 @@ function addWarning(){
     let newWarning = document.getElementById("warnings").value;
     chrome.storage.sync.get("warnings", function(a){
         let warning = a.warnings;
-        warning.push(newWarning);
-        chrome.storage.sync.set({"warnings": warning}, function(){console.log("pls work", warning)})
+        if(!warning.includes(newWarning)) {
+            warning.push(newWarning);
+            chrome.storage.sync.set({"warnings": warning}, function(){console.log("pls work", warning)})
+        }
     });
     document.getElementById("warnings").value = "";
 }
