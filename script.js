@@ -3,10 +3,10 @@ var mutationObserver = new MutationObserver(function(mutations) {
     let x = document.getElementsByClassName("userContentWrapper");
     let replace = document.createElement("p");
     replace.innerHTML = "<h1>KEYWORD FOUND AND REPLACED</h1>";
-    let keywords = ["Peaches", "cat"];
+    let keywords = ["PEACHES"];
     for(let i = 0; i < x.length; i++) {
       for(let j = 0; j < keywords.length; j++) {
-        if(x[i].textContent.includes(keywords[j])) {
+        if(x[i].textContent.toLowerCase().includes(keywords[j].toLowerCase())) {
           x[i].parentElement.replaceChild(replace, x[i]);
         }
       }
