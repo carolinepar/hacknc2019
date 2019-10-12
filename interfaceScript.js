@@ -3,7 +3,6 @@ chrome.storage.sync.get("warnings", function(data){
         chrome.storage.sync.set({"warnings": []}, function(){console.log("new storage made")})
     }
 })
-
 document.getElementById("addButton").onclick = function() {addWarning()};
 
 function addWarning(){
