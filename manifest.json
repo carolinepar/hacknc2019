@@ -1,0 +1,14 @@
+{
+    "name": "Trigger Warning System",
+    "version": "1.1",
+    "description": "HackNC2019",
+    "permissions": ["storage"],
+    "page_action": {
+        "default_popup": "interface.html"
+      },
+    "background": {
+        "scripts": ["script.js"],
+        "persistent": false
+      },
+    "manifest_version": 2
+  }
