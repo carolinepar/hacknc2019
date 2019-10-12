@@ -3,7 +3,7 @@
     "version": "1.4",
     "description": "HackNC2019",
     "permissions": ["storage"],
-    "page_action": {
+    "browser_action": {
       "default_popup": "interface.html"
     },
     "background": {
