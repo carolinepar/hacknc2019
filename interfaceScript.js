@@ -1,8 +1,9 @@
-let ar = [];
-chrome.storage.sync.get("warnings", function(a){ar = a.warnings});
-if(ar == undefined){
-    chrome.storage.sync.set({"warnings": []}, function(){console.log("added")});
-}
+chrome.storage.sync.get("warnings", function(data){
+    if(data.warnings === undefined){
+        chrome.storage.sync.set({"warnings": []}, function(){console.log("new storage made")})
+    }
+})
+
 document.getElementById("addButton").onclick = function() {addWarning()};
 
 function addWarning(){
@@ -12,6 +13,7 @@ function addWarning(){
         warning.push(newWarning);
         chrome.storage.sync.set({"warnings": warning}, function(){console.log("pls work", warning)})
     });
+    document.getElementById("warnings").value = "";
 }
 
 document.getElementById("warnings").addEventListener("keyup", function(event) {
