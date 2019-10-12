@@ -1,6 +1,6 @@
 var mutationObserver = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
-    let x = document.getElementsByClassName("userContentWrapper");
+    let x = document.querySelectorAll('[data-testid=fbfeed_story]');
     let replace = document.createElement("p");
     replace.innerHTML = `
     <div class="replacement-div" style="text-align: center; width: 500px; margin: auto">
