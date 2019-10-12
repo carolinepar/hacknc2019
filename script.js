@@ -18,7 +18,15 @@ var mutationObserver = new MutationObserver(function(mutations) {
             </div>
         </div>
     `;
-    let keywords = ["PEACHES"];
+    
+    let keywords = [];
+    let ar = [];
+    chrome.storage.sync.get("warnings", function(a){ar = a.warnings});
+    if(ar != undefined){
+      keywords = ar;
+      console.log(keywords);
+    }
+
     for(let i = 0; i < x.length; i++) {
       for(let j = 0; j < keywords.length; j++) {
         if(x[i].textContent.toLowerCase().includes(keywords[j].toLowerCase())) {
