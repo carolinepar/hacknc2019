@@ -1,6 +1,8 @@
-var x = document.getElementsByClassName("_2s1y");
-//x.style.backgroundColor = "red";
-var i;
+let x = document.getElementsByClassName("userContentWrapper");
+let i;
 for (i = 0; i < x.length; i++) {
-  x[i].style.backgroundColor = "red";
+  let replace = document.createElement("p");
+  replace.innerHTML = "<h1>Hello World</h1>";
+  x[i].parentElement.replaceChild(replace, x[i]);
+  x[i].style.color = "yellow";
 }
