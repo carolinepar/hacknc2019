@@ -1,0 +1,21 @@
+.replacement-div{
+    text-align: center;
+    width: 500px;
+    height: 1000px;
+}
+
+/* .text-warning {
+
+} */
+
+.view-check-button {
+    padding: 6px 18px;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.view-check-button:hover {
+    background-color: white;
+    color: black;
+  }
