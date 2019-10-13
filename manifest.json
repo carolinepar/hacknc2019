@@ -1,6 +1,6 @@
 {
     "name": "content warning",
-    "version": "1.2",
+    "version": "1.7",
     "description": "HackNC2019",
     "permissions": ["storage"],
     "browser_action": {

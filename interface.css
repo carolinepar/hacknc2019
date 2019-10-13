@@ -5,10 +5,10 @@ body{
     height:100px;
     padding: 20px;
     text-align: center;
-    font-family: 'KoPub Batang', serif;
-    font-size: 15px;
-    background-color: black;
-    color: white;
+    font-family: Geneva,Tahoma,Verdana,sans-serif; 
+    font-size: 12px;
+    background-color: rgb(57, 54, 54);
+    color: rgb(240, 240, 237);
 }
 
 input[type=text], select {
@@ -22,17 +22,18 @@ input[type=text], select {
 }
 
 button {
-	background-color:#44c767!important;
+	background-color:#3b5998!important;
 	border-radius:20px;
-	border:1px solid #18ab29;
+	border:1px solid #2f4982;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff!important;
+	color: rgb(240, 240, 237)!important;
 	font-size:10px;
 	padding: 10px 30px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #2f6627;
+    text-shadow:0px 1px 0px #191d48;
     margin-bottom: 20px;
+    font-family: Geneva,Tahoma,Verdana,sans-serif; 
 }
 
 button:hover {

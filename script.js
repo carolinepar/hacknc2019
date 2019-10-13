@@ -10,11 +10,11 @@ var mutationObserver = new MutationObserver(function(mutations) {
     <div class="replacement-div" style="text-align: center; width: auto; margin: auto">
             <div class="text-warning">
                 <h3>This post was marked as sensitive through the 
-                    <span style="color: #3b5998">content warning</span> extension</h3>
+                    <span style="color: #3b5998">content warning</span> extension.</h3>
             </div>
             <div class="extra-info">
-                <h5>To update your sensitivty settings and preferences, go to the 
-                    <span style="color: #3b5998">content warning</span> extension in your browser</h5>
+                <h5>To update your sensitivity settings and preferences, go to the 
+                    <span style="color: #3b5998">content warning</span> extension in your browser.</h5>
             </div>
         </div>
     `;
