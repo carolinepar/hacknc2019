@@ -1,7 +1,7 @@
 {
     "name": "content warning",
     "version": "1.7",
-    "description": "HackNC2019",
+    "description": "A filtering system for Facebook users that removes content containing custom defined subjects and keywords.",
     "permissions": ["storage"],
     "browser_action": {
         "default_popup": "interface.html"
