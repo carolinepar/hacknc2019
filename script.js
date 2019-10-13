@@ -33,7 +33,7 @@ var mutationObserver = new MutationObserver(function(mutations) {
       //hides a post if it includes one of the key words
       for(let i = 0; i < x.length; i++) {
         for(let j = 0; j < keywords.length; j++) {
-          if(x[i].textContent.includes(keywords[j])) {
+          if(x[i].textContent.toLowerCase().includes(keywords[j].toLowerCase())) {
             x[i].parentElement.replaceChild(replace, x[i]);
           }
         }
