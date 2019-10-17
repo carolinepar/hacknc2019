@@ -5,15 +5,11 @@ content warning is a Google Chrome Extension for Facebook that blocks content on
 
 **To run this project right now:**
 
-Go to chrome://extensions in your Google Chrome browser.
+Add the extension to your Google Chrome browser using the following link:
 
-Turn on Developer Mode using the button on the top right.
-
-Click on "Load Unpacked" and then select the directory for the files provided.
+https://chrome.google.com/webstore/detail/content-warning/dcolcmlgddmkilpjniccnadfdmgifjfd
 
 Enable the extension and you should be good to go!
-
-Sorry this isn't published in the Chrome Web Store yet, their image servers seem to be down.
 
 
 **Inspiration**
