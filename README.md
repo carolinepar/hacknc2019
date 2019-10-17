@@ -14,12 +14,12 @@ Enable the extension and you should be good to go!
 
 **Inspiration**
 
-Every single day, we see posts on Facebook where people have commented underneath to ask the poster to add trigger or content warnings. Why should a person have to see content and topics that they don't want to just because other people didn't think about adding a warning about it?
+For people who have been through any sort of trauma or painful experience, simply coming across an online post containing certain words can change the course of their day. Scrolling through social media is a normal, sometimes integral, part of people's lives today. We believe that no person should be worries or anxious about upsetting or triggering content online.
 
 
 **What it does**
 
-content warning asks the each user for custom keywords they find triggering or upsetting and it does its best to hide any posts with those keywords from appearing on a person's feed. Instead, the person is given a small label that informs them that a post has been hidden. It provides a whole new experience, free of worry for people who are anxious or worried about scrolling through social media.
+content warning asks the each user for custom keywords they find triggering or upsetting and it does its best to hide any posts with those keywords from appearing on a person's feed. Instead, the person is given a small label that informs them that a post has been hidden. Instead of having to block an entire account for one or two posts, or having to stop using Facebook altogether, content warning gives users the option to only block the specific content they would like to hide. It provides a whole new experience, free of worry for people who are anxious or worried about scrolling through social media.
 
 
 **How we built it**
