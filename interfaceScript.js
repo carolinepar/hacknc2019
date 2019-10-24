@@ -1,9 +1,11 @@
+//gets list of keywords from local storage
 chrome.storage.sync.get("warnings", function(data){
     if(data.warnings === undefined){
         chrome.storage.sync.set({"warnings": []}, function(){console.log("new storage made")})
     }
 })
 
+//calls the add or remove warning functions after adding word
 document.getElementById("addButton").onclick = function() {addWarning()};
 document.getElementById("removeButton").onclick = function() {removeWarning()};
 
@@ -39,7 +41,6 @@ function removeWarning(){
 
 //incomplete: submits the input when pressing enter
 document.getElementById("warnings").addEventListener("keyup", function(event) {
-    // Number 13 is the "Enter" key on the keyboard
     event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("addButton").click();
