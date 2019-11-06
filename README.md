@@ -14,7 +14,7 @@ Enable the extension and you should be good to go!
 
 **Inspiration**
 
-For people who have been through any sort of trauma or painful experience, simply coming across an online post containing certain words can change the course of their day. Scrolling through social media is a normal, sometimes integral, part of people's lives today. We believe that no person should be worries or anxious about upsetting or triggering content online.
+Mental Health is such an important, yet frequently overlooked factor in our lives. It can have a huge impact on people and some might be sensitive to certain keywords or information with regards to their mental health. For people who have been through any sort of trauma or painful experience, simply coming across an online post containing certain words can change the course of their day. Scrolling through social media is a normal, sometimes integral, part of people's lives today. We believe that no person should be worries or anxious about upsetting or triggering content online.
 
 
 **What it does**
